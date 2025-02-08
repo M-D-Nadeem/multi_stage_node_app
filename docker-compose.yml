@@ -1,0 +1,11 @@
+version: '4.1'
+services:
+ multi-stage-node-app:
+  container_name: "multi-stage-node-app"
+  build: .
+  ports:
+   - 3001:3001
+  restart: always
+  volumes:
+   - .:/app
+   - /app/node_modules
